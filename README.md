@@ -1,4 +1,4 @@
-# AngularFormsTemplateDriven
+# Angular 2::Forms Template Driven
 
 <a href="https://aserputko.github.io//angular-forms-template-driven" target="_blank"><img src="https://aserputko.github.io/angular-forms-template-driven/assets/images/demo.png"></a>
 
