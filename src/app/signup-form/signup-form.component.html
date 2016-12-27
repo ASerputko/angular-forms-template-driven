@@ -1,0 +1,70 @@
+<div class="container app-signup-form">
+  <form novalidate class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label class="col-sm-2">
+        <span>Full name</span>
+      </label>
+      <div class="col-sm-10">
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          placeholder="Your full name"
+          #userName="ngModel"
+          ngModel
+          minlength="2"
+          required>
+      </div>
+    </div>
+    <div *ngIf="userName.errors?.required && userName.touched" class="col-sm-offset-2 alert alert-danger">
+      Name is required
+    </div>
+    <div *ngIf="userName.errors?.minlength && userName.touched" class="col-sm-offset-2 alert alert-danger">
+      Minimum of 2 characters
+    </div>
+    <div ngModelGroup="account" #userAccount="ngModelGroup">
+      <div class="form-group">
+        <label class="col-sm-2">
+          <span>Email address</span>
+        </label>
+        <div class="col-sm-10">
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            #userEmail="ngModel"
+            ngModel
+            required>
+          </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2">
+          <span>Confirm address</span>
+        </label>
+        <div class="col-sm-10">
+          <input
+            class="form-control"
+            type="email"
+            name="confirm"
+            placeholder="Confirm your email address"
+            #userConfirm="ngModel"
+            ngModel
+            required>
+          </div>
+      </div>
+    </div>
+    <div *ngIf="userAccount.invalid && userEmail.touched && userConfirm.touched" class="col-sm-offset-2 alert alert-danger">
+      Both emails are required
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="f.invalid">Sign up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
