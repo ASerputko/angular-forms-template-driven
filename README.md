@@ -2,6 +2,8 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
+<a href="https://aserputko.github.io//angular-forms-template-driven" target="_blank"><img src="https://aserputko.github.io/angular-forms-template-driven/assets/images/demo.png"></a>
+
 > Check out the [live demo](https://aserputko.github.io//angular-forms-template-driven)!
 
 ## Development server
